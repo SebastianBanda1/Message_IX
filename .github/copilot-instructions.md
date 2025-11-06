@@ -1,17 +1,24 @@
 # MESSAGE-IX Energy System Modeling Project
 
-This project implements a 2-region energy system model using MESSAGE-IX framework for industrial and residential demand simulation with natural gas, wind, and solar energy sources.
+This repository implements a comprehensive two-region energy system model using the MESSAGE-IX framework for long-term energy planning analysis (2025-2050). The model incorporates realistic technology costs, environmental constraints, and renewable energy integration scenarios with battery storage capabilities.
 
-## Project Structure
-- `/data/` - Input data files for regions, demands, and energy sources
-- `/models/` - MESSAGE-IX model definitions and configurations
-- `/scripts/` - Python analysis and visualization scripts
-- `/results/` - Output data and visualizations
-- `/docs/` - Documentation and methodology
+## Technical Framework
+- **Core Model**: MESSAGE-IX optimization framework with Python API
+- **Analysis Period**: 2025-2050 with annual time steps and 2.3% demand growth
+- **Regional Structure**: Industrial and Residential demand zones with differentiated characteristics
+- **Technology Portfolio**: Natural gas CCGT, onshore wind, utility solar PV, lithium-ion battery storage
+- **Scenarios**: Baseline transition vs accelerated battery storage integration
 
-## Development Guidelines
-- Use MESSAGE-IX Python API for model development
-- Follow energy modeling best practices
-- Implement proper data validation and error handling
-- Create clear visualizations for results analysis
-- Document all modeling assumptions and methodologies
+## Repository Organization
+- `/data/` - Generated datasets including demand patterns, technology costs, and renewable profiles
+- `/models/` - MESSAGE-IX model definitions and optimization configurations
+- `/scripts/` - Core analysis modules for modeling, visualization, and data processing
+- `/results/` - Analysis outputs including interactive dashboard and scenario comparisons
+- `/docs/` - Comprehensive technical documentation and methodology references
+
+## Development Standards
+- Follow MESSAGE-IX API conventions and optimization modeling best practices
+- Implement robust data validation and error handling throughout analysis pipeline
+- Maintain comprehensive documentation of modeling assumptions and data sources
+- Ensure reproducible results with clear parameter specifications
+- Provide interactive visualizations for stakeholder communication and analysis interpretation
