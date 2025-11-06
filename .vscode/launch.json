@@ -1,0 +1,38 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run MESSAGE-IX Model",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/scripts/run_model.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/scripts"
+            }
+        },
+        {
+            "name": "Generate Visualizations",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/scripts/visualize_results.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/scripts"
+            }
+        },
+        {
+            "name": "Run Data Analysis",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/scripts/data_analysis.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/scripts"
+            }
+        }
+    ]
+}

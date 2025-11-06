@@ -1,0 +1,564 @@
+{
+  "baseline": {
+    "scenario_name": "baseline",
+    "years": [
+      2025,
+      2030,
+      2035,
+      2040
+    ],
+    "annual_results": {
+      "2025": {
+        "demand_analysis": {
+          "Industrial": {
+            "total_daily_mwh": 2382.2834062903644,
+            "peak_mw": 107.89606407753696,
+            "min_mw": 90.43359877671101,
+            "load_factor": 0.9199761774822452
+          },
+          "Residential": {
+            "total_daily_mwh": 1987.5307814726946,
+            "peak_mw": 129.37094624951976,
+            "min_mw": 43.396025690310786,
+            "load_factor": 0.6401265891774344
+          }
+        },
+        "generation_mix": {
+          "wind_turbine": 524.377702531567,
+          "solar_pv": 349.5851350210447,
+          "natural_gas_plant": 3495.851350210447
+        },
+        "costs": {
+          "natural_gas_plant": {
+            "capex": 950000.0,
+            "opex_fixed": 15000,
+            "opex_variable": 35,
+            "fuel_cost": 38,
+            "co2_intensity": 354
+          },
+          "wind_turbine": {
+            "capex": 1320000.0,
+            "opex_fixed": 25000,
+            "opex_variable": 12,
+            "fuel_cost": 0,
+            "co2_intensity": 11
+          },
+          "solar_pv": {
+            "capex": 980000.0,
+            "opex_fixed": 18000,
+            "opex_variable": 8,
+            "fuel_cost": 0,
+            "co2_intensity": 41
+          },
+          "lithium_battery": {
+            "capex": 1580000.0,
+            "opex_fixed": 22000,
+            "opex_variable": 5,
+            "fuel_cost": 0,
+            "co2_intensity": 0
+          }
+        },
+        "emissions": {
+          "total_emissions_tons": 1257.6325232382085,
+          "carbon_intensity_kg_mwh": 287.80000000000007,
+          "emissions_by_tech": {
+            "wind_turbine": 5.768154727847238,
+            "solar_pv": 14.332990535862834,
+            "natural_gas_plant": 1237.5313779744984
+          },
+          "renewable_share": 0.2
+        },
+        "renewable_share": 0.2
+      },
+      "2030": {
+        "demand_analysis": {
+          "Industrial": {
+            "total_daily_mwh": 2702.0097673293467,
+            "peak_mw": 120.65748896354918,
+            "min_mw": 102.16464134938849,
+            "load_factor": 0.9330853913212231
+          },
+          "Residential": {
+            "total_daily_mwh": 2202.1648197539994,
+            "peak_mw": 148.2927554418103,
+            "min_mw": 40.98806492908361,
+            "load_factor": 0.6187548893833532
+          }
+        },
+        "generation_mix": {
+          "wind_turbine": 588.5009504500015,
+          "solar_pv": 392.33396696666773,
+          "natural_gas_plant": 3923.339669666677
+        },
+        "costs": {
+          "natural_gas_plant": {
+            "capex": 950000.0,
+            "opex_fixed": 15000,
+            "opex_variable": 35,
+            "fuel_cost": 38,
+            "co2_intensity": 354
+          },
+          "wind_turbine": {
+            "capex": 869987.6106240002,
+            "opex_fixed": 25000,
+            "opex_variable": 12,
+            "fuel_cost": 0,
+            "co2_intensity": 11
+          },
+          "solar_pv": {
+            "capex": 434831.20624999993,
+            "opex_fixed": 18000,
+            "opex_variable": 8,
+            "fuel_cost": 0,
+            "co2_intensity": 41
+          },
+          "lithium_battery": {
+            "capex": 585768.9522560003,
+            "opex_fixed": 22000,
+            "opex_variable": 5,
+            "fuel_cost": 0,
+            "co2_intensity": 0
+          }
+        },
+        "emissions": {
+          "total_emissions_tons": 1411.4214461625868,
+          "carbon_intensity_kg_mwh": 287.8,
+          "emissions_by_tech": {
+            "wind_turbine": 6.473510454950016,
+            "solar_pv": 16.085692645633376,
+            "natural_gas_plant": 1388.8622430620035
+          },
+          "renewable_share": 0.2
+        },
+        "renewable_share": 0.2
+      },
+      "2035": {
+        "demand_analysis": {
+          "Industrial": {
+            "total_daily_mwh": 3020.3887970181195,
+            "peak_mw": 140.99339869738273,
+            "min_mw": 113.48913421375585,
+            "load_factor": 0.8925916700483402
+          },
+          "Residential": {
+            "total_daily_mwh": 2396.8484474567267,
+            "peak_mw": 165.1183367476765,
+            "min_mw": 49.57476538139121,
+            "load_factor": 0.6048309792710063
+          }
+        },
+        "generation_mix": {
+          "wind_turbine": 1137.6198213397176,
+          "solar_pv": 758.4132142264784,
+          "natural_gas_plant": 3521.2042089086503
+        },
+        "costs": {
+          "natural_gas_plant": {
+            "capex": 950000.0,
+            "opex_fixed": 15000,
+            "opex_variable": 35,
+            "fuel_cost": 38,
+            "co2_intensity": 354
+          },
+          "wind_turbine": {
+            "capex": 573392.7595751947,
+            "opex_fixed": 25000,
+            "opex_variable": 12,
+            "fuel_cost": 0,
+            "co2_intensity": 11
+          },
+          "solar_pv": {
+            "capex": 192936.91625390813,
+            "opex_fixed": 18000,
+            "opex_variable": 8,
+            "fuel_cost": 0,
+            "co2_intensity": 41
+          },
+          "lithium_battery": {
+            "capex": 217167.8895108179,
+            "opex_fixed": 22000,
+            "opex_variable": 5,
+            "fuel_cost": 0,
+            "co2_intensity": 0
+          }
+        },
+        "emissions": {
+          "total_emissions_tons": 1290.1150497716849,
+          "carbon_intensity_kg_mwh": 238.15000000000006,
+          "emissions_by_tech": {
+            "wind_turbine": 12.513818034736895,
+            "solar_pv": 31.094941783285616,
+            "natural_gas_plant": 1246.5062899536624
+          },
+          "renewable_share": 0.35
+        },
+        "renewable_share": 0.35
+      },
+      "2040": {
+        "demand_analysis": {
+          "Industrial": {
+            "total_daily_mwh": 3411.2931522487393,
+            "peak_mw": 153.9873419533663,
+            "min_mw": 131.36230667807615,
+            "load_factor": 0.923044796240952
+          },
+          "Residential": {
+            "total_daily_mwh": 2661.5279007456834,
+            "peak_mw": 173.95889329850215,
+            "min_mw": 57.81882603493094,
+            "load_factor": 0.6374896606988149
+          }
+        },
+        "generation_mix": {
+          "wind_turbine": 1275.2924211288287,
+          "solar_pv": 850.1949474192191,
+          "natural_gas_plant": 3947.3336844463747
+        },
+        "costs": {
+          "natural_gas_plant": {
+            "capex": 950000.0,
+            "opex_fixed": 15000,
+            "opex_variable": 35,
+            "fuel_cost": 38,
+            "co2_intensity": 354
+          },
+          "wind_turbine": {
+            "capex": 377912.5733726708,
+            "opex_fixed": 25000,
+            "opex_variable": 12,
+            "fuel_cost": 0,
+            "co2_intensity": 11
+          },
+          "solar_pv": {
+            "capex": 85607.13471922664,
+            "opex_fixed": 18000,
+            "opex_variable": 8,
+            "fuel_cost": 0,
+            "co2_intensity": 41
+          },
+          "lithium_battery": {
+            "capex": 80512.78930531559,
+            "opex_fixed": 22000,
+            "opex_variable": 5,
+            "fuel_cost": 0,
+            "co2_intensity": 0
+          }
+        },
+        "emissions": {
+          "total_emissions_tons": 1446.2423337706218,
+          "carbon_intensity_kg_mwh": 238.15,
+          "emissions_by_tech": {
+            "wind_turbine": 14.028216632417116,
+            "solar_pv": 34.85799284418798,
+            "natural_gas_plant": 1397.3561242940168
+          },
+          "renewable_share": 0.35
+        },
+        "renewable_share": 0.35
+      }
+    },
+    "summary_metrics": {
+      "total_cumulative_emissions": 5405.4113529431015,
+      "average_renewable_share": 0.275,
+      "peak_system_demand_2050": 327.9462352518684,
+      "demand_growth_factor": 1.7655939939278111
+    },
+    "environmental_progress": {
+      "2030": {
+        "target_reduction": 0.5,
+        "achieved_reduction": -0.12228446710999141,
+        "on_track": false
+      },
+      "2040": {
+        "target_reduction": 0.75,
+        "achieved_reduction": -0.1499721158981897,
+        "on_track": false
+      }
+    }
+  },
+  "battery_storage": {
+    "scenario_name": "battery_storage",
+    "years": [
+      2025,
+      2030,
+      2035,
+      2040
+    ],
+    "annual_results": {
+      "2025": {
+        "demand_analysis": {
+          "Industrial": {
+            "total_daily_mwh": 2382.2834062903644,
+            "peak_mw": 107.89606407753696,
+            "min_mw": 90.43359877671101,
+            "load_factor": 0.9199761774822452
+          },
+          "Residential": {
+            "total_daily_mwh": 1987.5307814726946,
+            "peak_mw": 129.37094624951976,
+            "min_mw": 43.396025690310786,
+            "load_factor": 0.6401265891774344
+          }
+        },
+        "generation_mix": {
+          "wind_turbine": 699.1702700420894,
+          "solar_pv": 524.377702531567,
+          "lithium_battery": 436.9814187763059,
+          "natural_gas_plant": 3146.2662151894024
+        },
+        "costs": {
+          "natural_gas_plant": {
+            "capex": 950000.0,
+            "opex_fixed": 15000,
+            "opex_variable": 35,
+            "fuel_cost": 38,
+            "co2_intensity": 354
+          },
+          "wind_turbine": {
+            "capex": 1320000.0,
+            "opex_fixed": 25000,
+            "opex_variable": 12,
+            "fuel_cost": 0,
+            "co2_intensity": 11
+          },
+          "solar_pv": {
+            "capex": 980000.0,
+            "opex_fixed": 18000,
+            "opex_variable": 8,
+            "fuel_cost": 0,
+            "co2_intensity": 41
+          },
+          "lithium_battery": {
+            "capex": 1580000.0,
+            "opex_fixed": 22000,
+            "opex_variable": 5,
+            "fuel_cost": 0,
+            "co2_intensity": 0
+          }
+        },
+        "emissions": {
+          "total_emissions_tons": 1142.9685989513057,
+          "carbon_intensity_kg_mwh": 237.7818181818182,
+          "emissions_by_tech": {
+            "wind_turbine": 7.690872970462984,
+            "solar_pv": 21.499485803794247,
+            "lithium_battery": 0.0,
+            "natural_gas_plant": 1113.7782401770485
+          },
+          "renewable_share": 0.2545454545454545
+        },
+        "renewable_share": 0.2545454545454545
+      },
+      "2030": {
+        "demand_analysis": {
+          "Industrial": {
+            "total_daily_mwh": 2702.0097673293467,
+            "peak_mw": 120.65748896354918,
+            "min_mw": 102.16464134938849,
+            "load_factor": 0.9330853913212231
+          },
+          "Residential": {
+            "total_daily_mwh": 2202.1648197539994,
+            "peak_mw": 148.2927554418103,
+            "min_mw": 40.98806492908361,
+            "load_factor": 0.6187548893833532
+          }
+        },
+        "generation_mix": {
+          "wind_turbine": 784.6679339333355,
+          "solar_pv": 588.5009504500015,
+          "lithium_battery": 490.4174587083346,
+          "natural_gas_plant": 3531.005702700009
+        },
+        "costs": {
+          "natural_gas_plant": {
+            "capex": 950000.0,
+            "opex_fixed": 15000,
+            "opex_variable": 35,
+            "fuel_cost": 38,
+            "co2_intensity": 354
+          },
+          "wind_turbine": {
+            "capex": 869987.6106240002,
+            "opex_fixed": 25000,
+            "opex_variable": 12,
+            "fuel_cost": 0,
+            "co2_intensity": 11
+          },
+          "solar_pv": {
+            "capex": 434831.20624999993,
+            "opex_fixed": 18000,
+            "opex_variable": 8,
+            "fuel_cost": 0,
+            "co2_intensity": 41
+          },
+          "lithium_battery": {
+            "capex": 585768.9522560003,
+            "opex_fixed": 22000,
+            "opex_variable": 5,
+            "fuel_cost": 0,
+            "co2_intensity": 0
+          }
+        },
+        "emissions": {
+          "total_emissions_tons": 1282.7359049975198,
+          "carbon_intensity_kg_mwh": 237.78181818181818,
+          "emissions_by_tech": {
+            "wind_turbine": 8.631347273266691,
+            "solar_pv": 24.128538968450062,
+            "lithium_battery": 0.0,
+            "natural_gas_plant": 1249.9760187558031
+          },
+          "renewable_share": 0.2545454545454546
+        },
+        "renewable_share": 0.2545454545454546
+      },
+      "2035": {
+        "demand_analysis": {
+          "Industrial": {
+            "total_daily_mwh": 3020.3887970181195,
+            "peak_mw": 140.99339869738273,
+            "min_mw": 113.48913421375585,
+            "load_factor": 0.8925916700483402
+          },
+          "Residential": {
+            "total_daily_mwh": 2396.8484474567267,
+            "peak_mw": 165.1183367476765,
+            "min_mw": 49.57476538139121,
+            "load_factor": 0.6048309792710063
+          }
+        },
+        "generation_mix": {
+          "wind_turbine": 1516.8264284529569,
+          "solar_pv": 1137.6198213397176,
+          "lithium_battery": 541.7237244474846,
+          "natural_gas_plant": 2762.7909946821715
+        },
+        "costs": {
+          "natural_gas_plant": {
+            "capex": 950000.0,
+            "opex_fixed": 15000,
+            "opex_variable": 35,
+            "fuel_cost": 38,
+            "co2_intensity": 354
+          },
+          "wind_turbine": {
+            "capex": 573392.7595751947,
+            "opex_fixed": 25000,
+            "opex_variable": 12,
+            "fuel_cost": 0,
+            "co2_intensity": 11
+          },
+          "solar_pv": {
+            "capex": 192936.91625390813,
+            "opex_fixed": 18000,
+            "opex_variable": 8,
+            "fuel_cost": 0,
+            "co2_intensity": 41
+          },
+          "lithium_battery": {
+            "capex": 217167.8895108179,
+            "opex_fixed": 22000,
+            "opex_variable": 5,
+            "fuel_cost": 0,
+            "co2_intensity": 0
+          }
+        },
+        "emissions": {
+          "total_emissions_tons": 1041.3555155053996,
+          "carbon_intensity_kg_mwh": 174.75454545454545,
+          "emissions_by_tech": {
+            "wind_turbine": 16.685090712982525,
+            "solar_pv": 46.64241267492842,
+            "lithium_battery": 0.0,
+            "natural_gas_plant": 978.0280121174886
+          },
+          "renewable_share": 0.4454545454545454
+        },
+        "renewable_share": 0.4454545454545454
+      },
+      "2040": {
+        "demand_analysis": {
+          "Industrial": {
+            "total_daily_mwh": 3411.2931522487393,
+            "peak_mw": 153.9873419533663,
+            "min_mw": 131.36230667807615,
+            "load_factor": 0.923044796240952
+          },
+          "Residential": {
+            "total_daily_mwh": 2661.5279007456834,
+            "peak_mw": 173.95889329850215,
+            "min_mw": 57.81882603493094,
+            "load_factor": 0.6374896606988149
+          }
+        },
+        "generation_mix": {
+          "wind_turbine": 1700.3898948384383,
+          "solar_pv": 1275.2924211288287,
+          "lithium_battery": 607.2821052994423,
+          "natural_gas_plant": 3097.1387370271555
+        },
+        "costs": {
+          "natural_gas_plant": {
+            "capex": 950000.0,
+            "opex_fixed": 15000,
+            "opex_variable": 35,
+            "fuel_cost": 38,
+            "co2_intensity": 354
+          },
+          "wind_turbine": {
+            "capex": 377912.5733726708,
+            "opex_fixed": 25000,
+            "opex_variable": 12,
+            "fuel_cost": 0,
+            "co2_intensity": 11
+          },
+          "solar_pv": {
+            "capex": 85607.13471922664,
+            "opex_fixed": 18000,
+            "opex_variable": 8,
+            "fuel_cost": 0,
+            "co2_intensity": 41
+          },
+          "lithium_battery": {
+            "capex": 80512.78930531559,
+            "opex_fixed": 22000,
+            "opex_variable": 5,
+            "fuel_cost": 0,
+            "co2_intensity": 0
+          }
+        },
+        "emissions": {
+          "total_emissions_tons": 1167.3783910171176,
+          "carbon_intensity_kg_mwh": 174.75454545454542,
+          "emissions_by_tech": {
+            "wind_turbine": 18.70428884322282,
+            "solar_pv": 52.28698926628198,
+            "lithium_battery": 0.0,
+            "natural_gas_plant": 1096.3871129076128
+          },
+          "renewable_share": 0.4454545454545454
+        },
+        "renewable_share": 0.4454545454545454
+      }
+    },
+    "summary_metrics": {
+      "total_cumulative_emissions": 4634.438410471343,
+      "average_renewable_share": 0.3499999999999999,
+      "peak_system_demand_2050": 327.9462352518684,
+      "demand_growth_factor": 1.7655939939278111
+    },
+    "environmental_progress": {
+      "2030": {
+        "target_reduction": 0.5,
+        "achieved_reduction": -0.12228446710999163,
+        "on_track": false
+      },
+      "2040": {
+        "target_reduction": 0.75,
+        "achieved_reduction": -0.021356485285954685,
+        "on_track": false
+      }
+    }
+  }
+}

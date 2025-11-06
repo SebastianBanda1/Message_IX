@@ -1,0 +1,4 @@
+Technology,Capital_Cost_USD_MW,Operating_Cost_USD_MWh,Fuel_Cost_USD_MWh,Lifetime_Years,Efficiency
+natural_gas_plant,800000,45,35,25,0.45
+wind_turbine,1500000,25,0,20,1.0
+solar_pv,1200000,15,0,25,1.0
