@@ -23,6 +23,24 @@
             "problemMatcher": []
         },
         {
+            "label": "Launch Dashboard",
+            "type": "shell",
+            "command": "& \"${workspaceFolder}/.venv/Scripts/python.exe\"",
+            "args": [
+                "launch_dashboard.py"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "new",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
+        {
             "label": "Install Dependencies",
             "type": "shell",
             "command": "& \"${workspaceFolder}/.venv/Scripts/pip.exe\"",
@@ -41,6 +59,23 @@
                 "clear": false
             },
             "problemMatcher": []
+        },
+        {
+            "label": "Run Model + Dashboard",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "Run MESSAGE-IX Model",
+                "Launch Dashboard"
+            ],
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": true
+            }
         }
     ]
 }

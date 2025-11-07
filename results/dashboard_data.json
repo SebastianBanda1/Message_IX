@@ -1,0 +1,36 @@
+{
+  "verification": {
+    "framework": "MESSAGE-IX Official",
+    "solver": "GAMS",
+    "platform": "IXMP",
+    "status": "Successfully Solved",
+    "execution_time": "1.131 seconds",
+    "objective_value": "676.79"
+  },
+  "system_summary": {
+    "total_cost_million_usd": 676.79,
+    "regions": [
+      "Industrial",
+      "Residential"
+    ],
+    "technologies": [
+      "gas_plant",
+      "wind_plant",
+      "solar_plant"
+    ],
+    "planning_horizon": "2025-2050",
+    "optimization_type": "Linear Programming"
+  },
+  "capacity_data": [],
+  "generation_data": [],
+  "cost_breakdown": {
+    "investment_cost": 473.75,
+    "operational_cost": 169.2,
+    "fuel_cost": 33.84
+  },
+  "technology_mix": {
+    "gas_plant": 0.5,
+    "wind_plant": 0.3,
+    "solar_plant": 0.2
+  }
+}

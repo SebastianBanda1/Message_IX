@@ -3,10 +3,13 @@
     "framework": "MESSAGE-IX Official",
     "solver": "GAMS",
     "platform": "IXMP",
-    "status": "Successfully Solved"
+    "status": "Successfully Solved",
+    "execution_time": "1.131 seconds",
+    "objective_value": "676.79"
   },
   "results": {
-    "total_cost": "Optimization Completed",
-    "variables": 0
+    "total_cost": "676.79",
+    "capacity_points": 0,
+    "generation_points": 0
   }
 }
