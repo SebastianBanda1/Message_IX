@@ -6,64 +6,7 @@
             "type": "shell",
             "command": "& \"${workspaceFolder}/.venv/Scripts/python.exe\"",
             "args": [
-                "scripts/run_model.py"
-            ],
-            "group": "build",
-            "presentation": {
-                "echo": true,
-                "reveal": "always",
-                "focus": false,
-                "panel": "shared",
-                "showReuseMessage": true,
-                "clear": false
-            },
-            "problemMatcher": []
-        },
-        {
-            "label": "Generate Visualizations",
-            "type": "shell",
-            "command": "& \"${workspaceFolder}/.venv/Scripts/python.exe\"",
-            "args": [
-                "scripts/visualize_results.py"
-            ],
-            "group": "build",
-            "dependsOn": "Run MESSAGE-IX Model",
-            "presentation": {
-                "echo": true,
-                "reveal": "always",
-                "focus": false,
-                "panel": "shared",
-                "showReuseMessage": true,
-                "clear": false
-            },
-            "problemMatcher": []
-        },
-        {
-            "label": "Run Data Analysis",
-            "type": "shell",
-            "command": "& \"${workspaceFolder}/.venv/Scripts/python.exe\"",
-            "args": [
-                "scripts/data_analysis.py"
-            ],
-            "group": "build",
-            "dependsOn": "Run MESSAGE-IX Model",
-            "presentation": {
-                "echo": true,
-                "reveal": "always",
-                "focus": false,
-                "panel": "shared",
-                "showReuseMessage": true,
-                "clear": false
-            },
-            "problemMatcher": []
-        },
-        {
-            "label": "Full Analysis Pipeline",
-            "dependsOrder": "sequence",
-            "dependsOn": [
-                "Run MESSAGE-IX Model",
-                "Generate Visualizations",
-                "Run Data Analysis"
+                "scripts/run_messageix_final.py"
             ],
             "group": {
                 "kind": "build",
@@ -72,11 +15,12 @@
             "presentation": {
                 "echo": true,
                 "reveal": "always",
-                "focus": true,
+                "focus": false,
                 "panel": "shared",
                 "showReuseMessage": true,
-                "clear": true
-            }
+                "clear": false
+            },
+            "problemMatcher": []
         },
         {
             "label": "Install Dependencies",
@@ -94,24 +38,6 @@
                 "focus": false,
                 "panel": "shared",
                 "showReuseMessage": true,
-                "clear": false
-            },
-            "problemMatcher": []
-        },
-        {
-            "label": "Open Interactive Dashboard",
-            "type": "shell",
-            "command": "start",
-            "args": [
-                "\"${workspaceFolder}/results/interactive_dashboard.html\""
-            ],
-            "group": "test",
-            "presentation": {
-                "echo": true,
-                "reveal": "silent",
-                "focus": false,
-                "panel": "shared",
-                "showReuseMessage": false,
                 "clear": false
             },
             "problemMatcher": []

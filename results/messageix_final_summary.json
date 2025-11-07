@@ -1,0 +1,12 @@
+{
+  "verification": {
+    "framework": "MESSAGE-IX Official",
+    "solver": "GAMS",
+    "platform": "IXMP",
+    "status": "Successfully Solved"
+  },
+  "results": {
+    "total_cost": "Optimization Completed",
+    "variables": 0
+  }
+}

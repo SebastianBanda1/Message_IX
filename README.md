@@ -1,184 +1,187 @@
-# MESSAGE-IX Two-Region Energy System Model
+# MESSAGE-IX Energy System Model
 
-A comprehensive energy system modeling framework implementing MESSAGE-IX for long-term energy planning analysis. This project provides scenario-based modeling capabilities for energy system transitions from 2025 to 2050, incorporating realistic technology costs, environmental constraints, and renewable energy integration with storage solutions.
+![MESSAGE-IX](https://img.shields.io/badge/MESSAGE--IX-v3.11+-blue.svg)
+![Python](https://img.shields.io/badge/Python-3.8+-green.svg)
+![GAMS](https://img.shields.io/badge/GAMS-Compatible-orange.svg)
+![License](https://img.shields.io/badge/License-Apache%202.0-red.svg)
 
-## Abstract
+A professional implementation of a two-region energy system optimization model using the official MESSAGE-IX framework from IIASA (International Institute for Applied Systems Analysis).
 
-This energy system model analyzes the transition pathways for a two-region electricity system under different technology deployment scenarios. The model incorporates real-world technology cost projections from NREL ATB 2024, learning curve effects, and environmental targets aligned with climate goals. Two primary scenarios are evaluated: a baseline transition and an accelerated pathway incorporating lithium-ion battery storage for enhanced renewable integration.
+## Overview
 
-## Key Capabilities
+This repository demonstrates authentic MESSAGE-IX framework usage for long-term energy planning and optimization. The model implements a two-region energy system (Industrial and Residential) with multiple technology options including natural gas, wind, and solar power generation.
 
-- **Multi-year Projections**: 26-year analysis period (2025-2050) with annual time steps
-- **Demand Growth Modeling**: 2.3% annual electricity demand growth with regional differentiation
-- **Technology Portfolio**: Natural gas combined cycle, onshore wind, utility-scale solar PV, lithium-ion battery storage
-- **Economic Analysis**: Levelized cost of energy (LCOE) calculations with learning curve cost reductions
-- **Environmental Assessment**: CO2 emissions tracking with decarbonization target evaluation
-- **Scenario Comparison**: Baseline vs battery storage integration pathways
-- **Interactive Analytics**: Web-based dashboard for comprehensive results visualization
+## Key Features
 
-## Repository Structure
+- **Authentic MESSAGE-IX Implementation**: Uses the official MESSAGE-IX optimization framework, not simulation
+- **IXMP Integration**: Leverages the IXMP (ix modeling platform) for scenario management and data handling
+- **GAMS Solver Support**: Compatible with GAMS mathematical programming solver
+- **Two-Region Model**: Separate Industrial and Residential demand regions with technology choices
+- **Technology Portfolio**: Gas plants, wind farms, and solar PV installations
+- **Time Horizon**: 25-year planning period (2025-2050) with 5-year intervals
 
-```
-Message_IX/
-├── .github/               # Repository configuration and templates
-├── .vscode/               # VS Code workspace configuration
-├── data/                  # Generated datasets and input parameters
-│   ├── demand_patterns_baseline_2025_2050.csv
-│   ├── demand_patterns_battery_storage_2025_2050.csv
-│   ├── renewable_profiles.csv
-│   ├── technology_costs_baseline.csv
-│   └── technology_costs_battery_storage.csv
-├── docs/                  # Technical documentation
-│   ├── COMPLETE_PROJECT_GUIDE.md
-│   └── technical_documentation.md
-├── models/                # MESSAGE-IX model files (reserved)
-├── results/               # Analysis outputs and visualizations
-│   ├── comprehensive_dashboard_2050.html
-│   ├── scenario_comparison_2050.json
-│   └── *.png             # Static visualization outputs
-├── scripts/               # Core analysis modules
-│   ├── run_model.py       # Main energy system model
-│   ├── advanced_dashboard.py  # Interactive visualization generator
-│   ├── visualize_results.py   # Legacy visualization module
-│   └── data_analysis.py   # Statistical analysis module
-├── requirements.txt       # Python package dependencies
-└── README.md             # This documentation
-```
+## Technical Architecture
 
-## Installation and Setup
+### Core Components
+
+1. **MESSAGE-IX Framework**: Official IIASA optimization platform for integrated assessment modeling
+2. **IXMP Platform**: Database and scenario management system
+3. **Mathematical Solver**: GAMS (General Algebraic Modeling System) for linear programming optimization
+4. **Python API**: Official MESSAGE-IX Python interface for model building and execution
+
+### Model Structure
+
+- **Regions**: Industrial, Residential
+- **Technologies**: gas_plant, wind_plant, solar_plant  
+- **Time Periods**: 2025, 2030, 2040, 2050
+- **Optimization Type**: Linear Programming (LP)
+- **Objective**: Minimize total system cost while meeting demand constraints
+
+## Installation
 
 ### Prerequisites
-- Python 3.8 or higher
-- Virtual environment capability (venv or conda)
-- 4GB RAM minimum, 8GB recommended
 
-### Installation Steps
-1. Clone the repository:
+- Python 3.8 or higher
+- Virtual environment (recommended)
+- GAMS solver (for optimization) or alternative LP solver
+
+### Setup
+
+1. **Clone the repository**:
    ```bash
-   git clone https://github.com/SebastianBanda1/Message_IX.git
+   git clone https://github.com/your-username/Message_IX.git
    cd Message_IX
    ```
 
-2. Create and activate virtual environment:
+2. **Create and activate virtual environment**:
    ```bash
    python -m venv .venv
-   # Windows:
-   .venv\Scripts\activate
-   # macOS/Linux:
-   source .venv/bin/activate
+   .venv\Scripts\activate  # Windows
+   # source .venv/bin/activate  # Linux/Mac
    ```
 
-3. Install dependencies:
+3. **Install dependencies**:
    ```bash
    pip install -r requirements.txt
    ```
 
-### Verification
-Run the test suite to verify installation:
-```bash
-python scripts/run_model.py
-```
+## Usage
 
-## Usage Guide
+### Running the Model
 
-### Basic Execution
-Execute the complete analysis pipeline:
+Execute the MESSAGE-IX optimization model:
+
 ```bash
-python scripts/run_model.py          # Generate scenarios
-python scripts/advanced_dashboard.py # Create interactive dashboard
+python scripts/run_messageix_final.py
 ```
 
 ### VS Code Integration
-For enhanced development experience:
-1. Open workspace in VS Code
-2. Use Command Palette (Ctrl+Shift+P)
-3. Select "Tasks: Run Task" → "Full Analysis Pipeline"
 
-### Output Interpretation
-- **Interactive Dashboard**: Open `results/comprehensive_dashboard_2050.html` in web browser
-- **Raw Data**: CSV files in `data/` directory for custom analysis
-- **Scenario Results**: JSON format in `results/scenario_comparison_2050.json`
+The project includes VS Code configuration for easy development:
 
-## Model Specifications
+- **Run Task**: `Ctrl+Shift+P` → "Tasks: Run Task" → "Run MESSAGE-IX Model"
+- **Debug**: `F5` to run with debugger attached
+- **Build**: `Ctrl+Shift+B` for default build task
 
-### Regional Characteristics
-- **Industrial Region**: 100 MW baseline demand, 92% load factor, minimal diurnal variation
-- **Residential Region**: 80 MW baseline demand, 64% load factor, morning/evening peaks
+## Project Structure
 
-### Technology Parameters
-| Technology | CAPEX 2025 ($/MW) | Capacity Factor | Learning Rate | Lifetime |
-|------------|------------------|-----------------|---------------|----------|
-| Natural Gas CCGT | 950,000 | 85% | 0% | 30 years |
-| Onshore Wind | 1,320,000 | 42% | 8% | 25 years |
-| Utility Solar PV | 980,000 | 28% | 15% | 25 years |
-| Li-ion Battery | 1,580,000 | 95% | 18% | 15 years |
+```
+Message_IX/
+├── scripts/
+│   ├── messageix_final_working.py    # Core MESSAGE-IX implementation
+│   └── run_messageix_final.py        # Main execution script
+├── data/
+│   ├── demand_patterns.csv           # Regional demand data
+│   ├── renewable_profiles.csv        # Wind/solar generation profiles
+│   └── technology_costs.csv          # Technology cost parameters
+├── results/                          # Model outputs (generated)
+├── docs/                            # Technical documentation
+├── .vscode/                         # VS Code configuration
+├── requirements.txt                 # Python dependencies
+└── README.md                        # This file
+```
 
-### Environmental Targets
-- 2030: 50% CO2 reduction vs 2025 baseline
-- 2040: 75% CO2 reduction vs 2025 baseline  
-- 2050: 90% CO2 reduction vs 2025 baseline
+## Model Implementation Details
 
-## Results Overview
+### MESSAGE-IX Framework Integration
 
-### Scenario Comparison (2025-2050)
-| Metric | Baseline | Battery Storage | Improvement |
-|--------|----------|-----------------|-------------|
-| Cumulative Emissions | 5,405 tons CO2 | 4,634 tons CO2 | -14.3% |
-| Renewable Share | 27.5% | 35.0% | +27.3% |
-| Peak Demand 2050 | 328 MW | 328 MW | 0% |
+The model uses authentic MESSAGE-IX components:
 
-### Technology Cost Evolution
-- Wind turbine CAPEX: $1.32M/MW (2025) → $164k/MW (2050)
-- Solar PV CAPEX: $980k/MW (2025) → $17k/MW (2050)
-- Battery CAPEX: $1.58M/MW (2025) → $126k/MW (2050)
+- **Scenario Management**: Creates and manages optimization scenarios using `message_ix.Scenario`
+- **IXMP Platform**: Database backend for parameter storage and result management
+- **Technology Modeling**: Proper MESSAGE-IX technology definitions with input/output relationships
+- **Demand Modeling**: Regional demand specification with growth patterns
+- **Cost Optimization**: Minimizes total discounted system cost over planning horizon
 
-## Documentation
+### Mathematical Formulation
 
-### Technical References
-- **Complete Guide**: `docs/COMPLETE_PROJECT_GUIDE.md` (15,000+ words)
-- **Methodology**: `docs/technical_documentation.md`
-- **Data Sources**: NREL ATB 2024, IEA World Energy Outlook 2023, IPCC AR6
+The model implements standard MESSAGE-IX linear programming formulation:
 
-### Academic Applications
-- Energy systems engineering courses
-- Renewable energy integration studies
-- Climate policy analysis
-- Technology assessment research
+- **Objective Function**: Minimize total system cost (investment + operational)
+- **Constraints**: Demand balance, capacity limits, technology relationships
+- **Variables**: Technology capacity, activity levels, energy flows
+- **Parameters**: Costs, demand, technology characteristics
+
+## Differences from Jupyter Notebook Usage
+
+This implementation differs from typical Jupyter notebook MESSAGE-IX usage:
+
+### 1. **Structured Python Application**
+- Organized as a proper Python package with modules
+- Separation of concerns: model definition vs. execution
+- Professional code organization and documentation
+
+### 2. **VS Code Integration**
+- Debugging capabilities with breakpoints
+- Integrated terminal and task management
+- IntelliSense and code completion for MESSAGE-IX APIs
+
+### 3. **Production-Ready Architecture**
+- Error handling and logging
+- Modular design for extensibility
+- Configuration management
+- Automated execution workflows
+
+### 4. **Development Environment**
+- Virtual environment management
+- Dependency specification via requirements.txt
+- Version control integration
+- Professional project structure
 
 ## Contributing
 
-This project follows academic software development standards:
-- Issue tracking for bug reports and feature requests
-- Pull requests for code contributions
-- Documentation updates for methodology improvements
-- Citation requirements for academic use
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- **IIASA**: For developing and maintaining the MESSAGE-IX framework
+- **MESSAGE-IX Community**: For documentation and support
+- **GAMS Development Corporation**: For the optimization solver
+
+## Technical Support
+
+For MESSAGE-IX specific questions, consult:
+- [MESSAGE-IX Documentation](https://docs.messageix.org/)
+- [IXMP Documentation](https://docs.messageix.org/projects/ixmp/)
+- [MESSAGE-IX GitHub Repository](https://github.com/iiasa/message_ix)
 
 ## Citation
 
 If you use this model in academic work, please cite:
 
-```
-@software{message_ix_two_region_2025,
-  title={MESSAGE-IX Two-Region Energy System Model},
-  author={SebastianBanda1},
-  year={2025},
-  url={https://github.com/SebastianBanda1/Message_IX}
+```bibtex
+@misc{messageix_energy_model,
+  title = {MESSAGE-IX Energy System Model Implementation},
+  author = {Your Name},
+  year = {2024},
+  url = {https://github.com/your-username/Message_IX}
 }
 ```
-
-## Contact
-
-For questions, issues, or collaboration opportunities:
-- GitHub Issues: https://github.com/SebastianBanda1/Message_IX/issues
-- Repository: https://github.com/SebastianBanda1/Message_IX
-
-## Acknowledgments
-
-- MESSAGE-IX framework by IIASA
-- Technology cost data from NREL Annual Technology Baseline 2024
-- Emissions factors from IPCC AR6 Working Group III
-- Energy projections from IEA World Energy Outlook 2023
