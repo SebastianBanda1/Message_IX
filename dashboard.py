@@ -1,5 +1,5 @@
 """
-🌟 MESSAGE-IX Energy System Dashboard
+MESSAGE-IX Energy System Dashboard
 Comprehensive visualization of MESSAGE-IX optimization results
 Real-time dashboard for energy system planning analysis
 """
@@ -178,28 +178,28 @@ def main():
     dashboard_data, capacity_df, generation_df, demand_df, renewable_df, costs_df = load_data()
     
     # Header
-    st.markdown('<h1 class="main-header">⚡ MESSAGE-IX Energy System Dashboard</h1>', unsafe_allow_html=True)
-    st.markdown("### 🎯 Comprehensive Analysis of Energy System Optimization Results")
+    st.markdown('<h1 class="main-header">MESSAGE-IX Energy System Dashboard</h1>', unsafe_allow_html=True)
+    st.markdown("### Comprehensive Analysis of Energy System Optimization Results")
     
     # Sidebar controls
-    st.sidebar.title("📊 Dashboard Controls")
+    st.sidebar.title("Dashboard Controls")
     
     # Model verification section
-    with st.sidebar.expander("🔍 Model Verification", expanded=True):
+    with st.sidebar.expander("Model Verification", expanded=True):
         verification = dashboard_data['verification']
-        st.success(f"✅ {verification['status']}")
-        st.info(f"🔧 Framework: {verification['framework']}")
-        st.info(f"⚙️ Solver: {verification['solver']}")
-        st.info(f"🏗️ Platform: {verification['platform']}")
-        st.info(f"⏱️ Execution: {verification['execution_time']}")
+        st.success(f"Status: {verification['status']}")
+        st.info(f"Framework: {verification['framework']}")
+        st.info(f"Solver: {verification['solver']}")
+        st.info(f"Platform: {verification['platform']}")
+        st.info(f"Execution: {verification['execution_time']}")
     
     # Filter controls
-    st.sidebar.subheader("🎛️ View Controls")
+    st.sidebar.subheader("View Controls")
     
     # Year filter
     available_years = sorted(capacity_df['year'].unique()) if not capacity_df.empty else [2025, 2030, 2040, 2050]
     selected_years = st.sidebar.multiselect(
-        "📅 Select Years",
+        "Select Years",
         available_years,
         default=available_years
     )
@@ -207,7 +207,7 @@ def main():
     # Region filter
     available_regions = capacity_df['region'].unique() if not capacity_df.empty else ['Industrial', 'Residential']
     selected_regions = st.sidebar.multiselect(
-        "🏭 Select Regions", 
+        "Select Regions", 
         available_regions,
         default=available_regions
     )
@@ -215,7 +215,7 @@ def main():
     # Technology filter
     available_techs = capacity_df['technology'].unique() if not capacity_df.empty else ['gas_plant', 'wind_plant', 'solar_plant']
     selected_techs = st.sidebar.multiselect(
-        "🔧 Select Technologies",
+        "Select Technologies",
         available_techs,
         default=available_techs
     )
@@ -223,7 +223,7 @@ def main():
     # Main dashboard content
     
     # 1. Executive Summary
-    st.markdown('<h2 class="section-header">📈 Executive Summary</h2>', unsafe_allow_html=True)
+    st.markdown('<h2 class="section-header">Executive Summary</h2>', unsafe_allow_html=True)
     
     summary = dashboard_data['system_summary']
     
@@ -231,28 +231,28 @@ def main():
     
     with col1:
         st.metric(
-            "💰 Total System Cost",
+            "Total System Cost",
             f"${summary['total_cost_million_usd']:.1f}M",
             delta="Optimized"
         )
     
     with col2:
         st.metric(
-            "🏭 Regions",
+            "Regions",
             len(summary['regions']),
             delta="Industrial + Residential"
         )
     
     with col3:
         st.metric(
-            "⚡ Technologies", 
+            "Technologies", 
             len(summary['technologies']),
             delta="Gas, Wind, Solar"
         )
     
     with col4:
         st.metric(
-            "📅 Planning Horizon",
+            "Planning Horizon",
             summary['planning_horizon'],
             delta="25 years"
         )
