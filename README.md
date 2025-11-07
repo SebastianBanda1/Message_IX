@@ -5,284 +5,284 @@
 ![GAMS](https://img.shields.io/badge/GAMS-Solver-orange.svg)
 ![Python](https://img.shields.io/badge/Python-3.8+-green.svg)
 
-**Implementación profesional del framework MESSAGE-IX con dashboard interactivo completo para análisis de sistemas energéticos.**
+**Professional energy system optimization platform with comprehensive interactive dashboard for strategic energy planning.**
 
-## Descripción
+## Overview
 
-Sistema completo de optimización energética usando MESSAGE-IX auténtico de IIASA con dashboard de visualización en tiempo real. Modela un sistema de dos regiones (Industrial y Residencial) con tecnologías de gas natural, eólica y solar para el período 2025-2050.
+Complete energy optimization system featuring MESSAGE-IX framework with real-time visualization dashboard. Models a two-region energy system (Industrial and Residential zones) with natural gas, wind, and solar technologies for the planning period 2025-2050.
 
-## Características Principales
+## Key Features
 
-- **MESSAGE-IX Auténtico**: Framework oficial de IIASA, no simulación
-- **Dashboard Interactivo**: Visualización completa con Streamlit
-- **Optimización Real**: Solver GAMS con programación lineal
-- **Modelo Bi-Regional**: Zonas Industrial y Residencial
-- **Tecnologías Múltiples**: Gas, eólica y solar
-- **Análisis Temporal**: Horizonte 2025-2050
+- **Advanced Energy Modeling**: MESSAGE-IX optimization framework
+- **Interactive Dashboard**: Complete visualization suite with Streamlit
+- **Real Optimization**: GAMS solver with linear programming
+- **Multi-Regional Model**: Industrial and Residential zones
+- **Technology Portfolio**: Gas, wind and solar technologies
+- **Long-term Analysis**: 25-year planning horizon
 
-## Inicio Rápido
+## Quick Start
 
-### 1. Configuración del Entorno
+### 1. Environment Setup
 ```bash
-# Clonar repositorio
+# Clone repository
 git clone https://github.com/SebastianBanda1/Message_IX.git
 cd Message_IX
 
-# Crear entorno virtual
+# Create virtual environment
 python -m venv .venv
 .venv\Scripts\activate  # Windows
 
-# Instalar dependencias
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-### 2. Ejecutar Modelo MESSAGE-IX
+### 2. Run Energy Model
 ```bash
 python scripts/run_messageix_final.py
 ```
 
-### 3. Lanzar Dashboard
+### 3. Launch Dashboard
 ```bash
 python launch_dashboard.py
 ```
-*El dashboard se abrirá automáticamente en `http://localhost:8501`*
+*Dashboard will automatically open at `http://localhost:8501`*
 
-## Dashboard Completo
+## Dashboard Features
 
-### Características del Dashboard:
+### Dashboard Capabilities:
 
 #### **Executive Summary**
-- Métricas principales del sistema
-- Costo total optimizado ($676.79M USD)
-- Resumen de regiones y tecnologías
-- Estado de verificación del modelo
+- Key system metrics
+- Optimized total cost ($676.79M USD)
+- Regional and technology overview
+- Model verification status
 
-#### **Análisis de Costos**
-- Desglose detallado de costos
-- Gráficos de torta y barras interactivos
-- Costos de inversión, operación y combustible
-- Análisis porcentual
+#### **Cost Analysis**
+- Detailed cost breakdown
+- Interactive pie and bar charts
+- Investment, operation and fuel costs
+- Percentage analysis
 
-#### **Desarrollo de Capacidad**
-- Evolución temporal de capacidades
-- Comparación por tecnología y región
-- Gráficos de líneas y barras apiladas
-- Filtros interactivos por año/región/tecnología
+#### **Capacity Development**
+- Temporal capacity evolution
+- Technology and regional comparison
+- Line charts and stacked bars
+- Interactive filters by year/region/technology
 
-#### **Análisis de Generación**
-- Mapas de calor de generación
-- Tendencias temporales por tecnología
-- Gráficos de área y comparaciones
-- Datos en tiempo real
+#### **Generation Analysis**
+- Generation heatmaps
+- Technology trend analysis
+- Area charts and comparisons
+- Real-time data
 
-#### **Datos de Entrada**
-- Perfiles de demanda horaria
-- Disponibilidad de renovables
-- Costos tecnológicos
-- Estadísticas detalladas
+#### **Input Data**
+- Hourly demand profiles
+- Renewable availability
+- Technology costs
+- Detailed statistics
 
-#### **Mix Tecnológico**
-- Distribución de tecnologías
-- Comparación regional
-- Gráficos de participación
-- Análisis estratégico
+#### **Technology Mix**
+- Technology distribution
+- Regional comparison
+- Market share charts
+- Strategic analysis
 
-#### **Tablas Detalladas**
-- Resultados de capacidad
-- Datos de generación
-- Información de entrada
-- Opciones de descarga
+#### **Detailed Tables**
+- Capacity results
+- Generation data
+- Input information
+- Download options
 
-### Controles Interactivos:
-- **Filtros de Año**: Selección múltiple 2025-2050
-- **Filtros de Región**: Industrial/Residencial
-- **Filtros de Tecnología**: Gas/Eólica/Solar
-- **Descarga de Datos**: CSV, JSON, Excel
-- **Visualizaciones Dinámicas**: Plotly interactivo
+### Interactive Controls:
+- **Year Filters**: Multi-selection 2025-2050
+- **Region Filters**: Industrial/Residential
+- **Technology Filters**: Gas/Wind/Solar
+- **Data Export**: CSV, JSON, Excel
+- **Dynamic Visualizations**: Interactive Plotly charts
 
-## Estructura del Proyecto
+## Project Structure
 
 ```
 Message_IX/
 ├── scripts/
-│   ├── messageix_final_working.py    # Implementación MESSAGE-IX core
-│   └── run_messageix_final.py        # Script de ejecución
-├── dashboard.py                      # Dashboard Streamlit completo
-├── launch_dashboard.py               # Lanzador del dashboard
+│   ├── messageix_final_working.py    # Core energy model implementation
+│   └── run_messageix_final.py        # Model execution script
+├── dashboard.py                      # Complete Streamlit dashboard
+├── launch_dashboard.py               # Dashboard launcher
 ├── data/
-│   ├── demand_patterns.csv           # Patrones de demanda
-│   ├── renewable_profiles.csv        # Perfiles renovables
-│   └── technology_costs.csv          # Costos tecnológicos
-├── results/                          # Resultados de optimización
-├── .vscode/                         # Configuración VS Code
-└── requirements.txt                 # Dependencias
+│   ├── demand_patterns.csv           # Demand patterns
+│   ├── renewable_profiles.csv        # Renewable profiles
+│   └── technology_costs.csv          # Technology costs
+├── results/                          # Optimization results
+├── .vscode/                         # VS Code configuration
+└── requirements.txt                 # Dependencies
 ```
 
-## Implementación Técnica
+## Technical Implementation
 
-### MESSAGE-IX Framework
-- **Plataforma IXMP**: Gestión de escenarios y base de datos
-- **Solver GAMS**: Optimización de programación lineal
-- **Python API**: Interfaz oficial MESSAGE-IX
-- **Objective**: Minimización de costos del sistema
+### Energy Framework
+- **IXMP Platform**: Scenario and database management
+- **GAMS Solver**: Linear programming optimization
+- **Python API**: Official MESSAGE-IX interface
+- **Objective**: System cost minimization
 
-### Tecnologías del Dashboard
-- **Streamlit**: Framework de dashboard interactivo
-- **Plotly**: Visualizaciones dinámicas
-- **Pandas**: Procesamiento de datos
-- **NumPy**: Computación numérica
+### Dashboard Technologies
+- **Streamlit**: Interactive dashboard framework
+- **Plotly**: Dynamic visualizations
+- **Pandas**: Data processing
+- **NumPy**: Numerical computing
 
-### Modelo Energético
-- **Regiones**: Industrial (demanda alta), Residencial (demanda baja)
-- **Tecnologías**: 
-  - Gas Natural: $950/kW, 30 años vida útil
-  - Eólica: $1320/kW, 25 años vida útil  
-  - Solar: $980/kW, 25 años vida útil
-- **Optimización**: Costo mínimo con restricciones de demanda
+### Energy Model
+- **Regions**: Industrial (high demand), Residential (low demand)
+- **Technologies**: 
+  - Natural Gas: $950/kW, 30-year lifetime
+  - Wind: $1320/kW, 25-year lifetime  
+  - Solar: $980/kW, 25-year lifetime
+- **Optimization**: Minimum cost with demand constraints
 
-## Resultados del Modelo
+## Model Results
 
-### Métricas Principales:
-- **Costo Total**: $676.79 Millones USD
-- **Solver**: GAMS CPLEX (óptimo encontrado)
-- **Tiempo**: 0.375 segundos
-- **Variables**: 157 columnas, 165 filas
+### Key Metrics:
+- **Total Cost**: $676.79 Million USD
+- **Solver**: GAMS CPLEX (optimal solution found)
+- **Runtime**: 0.375 seconds
+- **Variables**: 157 columns, 165 rows
 
-### Mix Tecnológico Optimizado:
-- **Gas Natural**: 50% (tecnología base)
-- **Eólica**: 30% (crecimiento sostenido)
-- **Solar**: 20% (expansión acelerada)
+### Optimized Technology Mix:
+- **Natural Gas**: 50% (base technology)
+- **Wind**: 30% (sustained growth)
+- **Solar**: 20% (accelerated expansion)
 
-## Uso del Dashboard
+## Dashboard Usage
 
 ### VS Code Integration:
 ```bash
-# Tareas disponibles (Ctrl+Shift+P → "Tasks: Run Task")
-1. "Run MESSAGE-IX Model"        # Ejecuta optimización
-2. "Launch Dashboard"            # Abre dashboard
-3. "Install Dependencies"        # Instala paquetes
-4. "Run Model + Dashboard"       # Flujo completo
+# Available tasks (Ctrl+Shift+P → "Tasks: Run Task")
+1. "Run MESSAGE-IX Model"        # Execute optimization
+2. "Launch Dashboard"            # Open dashboard
+3. "Install Dependencies"        # Install packages
+4. "Run Model + Dashboard"       # Complete workflow
 ```
 
-### Comandos Directos:
+### Direct Commands:
 ```bash
-# Modelo solo
+# Model only
 python scripts/run_messageix_final.py
 
-# Dashboard solo  
+# Dashboard only  
 python launch_dashboard.py
 
-# Streamlit directo
+# Direct Streamlit
 streamlit run dashboard.py
 ```
 
-## Características Avanzadas
+## Advanced Features
 
-### Filtros Dinámicos:
-- Selección múltiple de años
-- Filtros por región
-- Selección de tecnologías
-- Actualización en tiempo real
+### Dynamic Filters:
+- Multi-year selection
+- Regional filters
+- Technology selection
+- Real-time updates
 
-### Visualizaciones:
-- Gráficos de líneas temporales
-- Mapas de calor
-- Gráficos de barras apiladas
-- Gráficos de torta interactivos
-- Gráficos de área
+### Visualizations:
+- Temporal line charts
+- Heat maps
+- Stacked bar charts
+- Interactive pie charts
+- Area charts
 
-### Exportación:
-- Descarga CSV de resultados
-- Exportación JSON completa
-- Archivos Excel detallados
-- Datos de entrada incluidos
+### Export Options:
+- CSV results download
+- Complete JSON export
+- Detailed Excel files
+- Input data included
 
-## Dependencias
+## Dependencies
 
 ```
-# Core MESSAGE-IX
+# Core Energy Framework
 message-ix>=3.11.0
 ixmp>=3.11.0
 
-# Dashboard & Visualización
+# Dashboard & Visualization
 streamlit>=1.28.0
 plotly>=5.17.0
 matplotlib>=3.7.0
 seaborn>=0.12.0
 
-# Procesamiento de datos
+# Data Processing
 pandas>=1.5.0
 numpy>=1.24.0
 ```
 
-## Comparación: VS Code vs Jupyter
+## Comparison: VS Code vs Jupyter
 
-| Característica | VS Code + Dashboard | Jupyter Notebooks |
-|---------------|-------------------|-------------------|
-| **Interfaz** | Dashboard profesional | Celdas secuenciales |
-| **Interactividad** | Filtros dinámicos | Estática |
-| **Visualización** | Plotly interactivo | Matplotlib básico |
-| **Producción** | Listo para despliegue | Solo exploración |
-| **Compartir** | URL web | Archivos .ipynb |
-| **Actualización** | Tiempo real | Manual |
+| Feature | VS Code + Dashboard | Jupyter Notebooks |
+|---------|-------------------|-------------------|
+| **Interface** | Professional dashboard | Sequential cells |
+| **Interactivity** | Dynamic filters | Static |
+| **Visualization** | Interactive Plotly | Basic matplotlib |
+| **Production** | Deployment ready | Exploration only |
+| **Sharing** | Web URL | .ipynb files |
+| **Updates** | Real-time | Manual |
 
-## Casos de Uso
+## Use Cases
 
-### **Analistas Energéticos**
-- Evaluación de políticas energéticas
-- Análisis de mix tecnológico óptimo
-- Planificación de inversiones
+### **Energy Analysts**
+- Energy policy evaluation
+- Optimal technology mix analysis
+- Investment planning
 
-### **Tomadores de Decisiones**
-- Dashboard ejecutivo con métricas clave
-- Visualizaciones para presentaciones
-- Análisis de escenarios
+### **Decision Makers**
+- Executive dashboard with key metrics
+- Presentation visualizations
+- Scenario analysis
 
-### **Investigadores**
-- Modelo MESSAGE-IX completo y auténtico
-- Datos exportables para análisis adicional
-- Framework extensible
+### **Researchers**
+- Complete energy modeling framework
+- Exportable data for additional analysis
+- Extensible platform
 
-### **Educación**
-- Demostración de optimización energética
-- Herramienta interactiva de aprendizaje
-- Ejemplo de MESSAGE-IX profesional
+### **Education**
+- Energy optimization demonstration
+- Interactive learning tool
+- Professional energy modeling example
 
-## Próximos Pasos
+## Future Enhancements
 
-Para extender el modelo:
+To extend the model:
 
-1. **Más Tecnologías**: Agregar baterías, nuclear, etc.
-2. **Más Regiones**: Expandar modelo geográfico
-3. **Escenarios**: Implementar múltiples escenarios
-4. **Incertidumbre**: Análisis de sensibilidad
-5. **Tiempo Real**: Conexión con datos en vivo
+1. **More Technologies**: Add batteries, nuclear, etc.
+2. **More Regions**: Expand geographical model
+3. **Scenarios**: Implement multiple scenarios
+4. **Uncertainty**: Sensitivity analysis
+5. **Real-time**: Live data connections
 
-## Contribuir
+## Contributing
 
-1. Fork del repositorio
-2. Crear rama feature (`git checkout -b feature/nueva-funcionalidad`)
-3. Commit cambios (`git commit -am 'Agregar nueva funcionalidad'`)
-4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
-5. Crear Pull Request
+1. Fork the repository
+2. Create feature branch (`git checkout -b feature/new-feature`)
+3. Commit changes (`git commit -am 'Add new feature'`)
+4. Push to branch (`git push origin feature/new-feature`)
+5. Create Pull Request
 
-## Licencia
+## License
 
-Proyecto bajo Apache License 2.0 - ver [LICENSE](LICENSE) para detalles.
+This project is licensed under the Apache License 2.0 - see [LICENSE](LICENSE) for details.
 
-## Agradecimientos
+## Acknowledgments
 
-- **IIASA**: Desarrollo del framework MESSAGE-IX
-- **Streamlit**: Framework de dashboard
-- **GAMS Corporation**: Solver de optimización
-- **Plotly**: Visualizaciones interactivas
+- **Energy Modeling Community**: Framework development
+- **Streamlit**: Dashboard framework
+- **GAMS Corporation**: Optimization solver
+- **Plotly**: Interactive visualizations
 
-## Soporte
+## Support
 
-- **MESSAGE-IX Docs**: https://docs.messageix.org/
-- **Streamlit Docs**: https://docs.streamlit.io/
-- **GitHub Issues**: Para reportar problemas
+- **MESSAGE-IX Documentation**: https://docs.messageix.org/
+- **Streamlit Documentation**: https://docs.streamlit.io/
+- **GitHub Issues**: For reporting problems
 
 ---
 
-**Dashboard MESSAGE-IX Profesional | Análisis Energético en Tiempo Real | Framework Oficial IIASA**
+**Professional MESSAGE-IX Dashboard | Real-time Energy Analysis | Advanced Optimization Platform**
